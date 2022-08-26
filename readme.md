@@ -1,6 +1,4 @@
 Скрипт показывает погоду в терминале используя сервис [wttr.in](https://wttr.in).
-По умолчанию показывает погоду в трех локациях: Череповец, Лондон, Шереметьево.
-Для отображения погоды в других локациях, поправьте соответствующую переменную.
 
 
 ### Install
@@ -29,9 +27,28 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+### Help
+
+```
+python ./main.py --help
+```
+```
+usage: main.py [-h] [--options OPTIONS] [--lang LANG] locations [locations ...]
+
+Show weather from https://wttr.in
+
+positional arguments:
+  locations          locations one or more
+
+options:
+  -h, --help         show this help message and exit
+  --options OPTIONS  See https://wttr.in/:help
+  --lang LANG        Language. See https://wttr.in/:help
+
+```
+
 ### Run
 
 ```
-python ./main.py
+python ./main Москва Краснодар Владивосток --lang en
 ```
-
