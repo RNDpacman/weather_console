@@ -1,5 +1,5 @@
 import requests
-
+import argparse
 
 def get_weather(*locations, lang='en', options='nTqu'):
     '''
@@ -17,11 +17,24 @@ def get_weather(*locations, lang='en', options='nTqu'):
         print(response.text)
 
 
+
+def get_parser():
+    '''
+    Парсит параметры командной строки и возвращает объект парсера
+    '''
+    parser = argparse.ArgumentParser(description='Show weather from https://wttr.in')
+    parser.add_argument('locations', nargs='+', help='locations one or more')
+    parser.add_argument('--options', default='nTqM', help='See https://wttr.in/:help')
+    parser.add_argument('--lang', default='ru', help='Language. See https://wttr.in/:help')
+
+    return parser.parse_args()
+
+def main():
+
+    args = get_parser()
+
+    get_weather(*args.locations, lang=args.lang, options=args.options)
+
 if __name__ == '__main__':
-
-    locations = ('Шереметьево',
-                 'Череповец',
-                 'Лондон')
-
-    get_weather(*locations, lang='ru', options='nTqM')
+    main()
 
