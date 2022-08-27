@@ -8,7 +8,6 @@ def get_weather(*locations, lang='en', options='nTqu', host='wttr.in') -> str:
     options - https://wttr.in/:help
     '''
     payload = {'lang': lang, **{option: '' for option in options}}
-    text = []
 
     for location in locations:
         url = f'https://{host}/{location}'
