@@ -51,4 +51,6 @@ options:
 ```
 python ./main.py Москва Мордор Владивосток 
 ```
-![output weather](screenshot.jpg | width=400)
+
+<img src="screenshot.jpg" width="400">
+
