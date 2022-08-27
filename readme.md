@@ -49,5 +49,5 @@ options:
 ### Run
 
 ```
-python ./main Москва Краснодар Владивосток --lang en
+python ./main Москва Мордор Владивосток 
 ```
