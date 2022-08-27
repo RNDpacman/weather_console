@@ -49,5 +49,6 @@ options:
 ### Run
 
 ```
-python ./main Москва Мордор Владивосток 
+python ./main.py Москва Мордор Владивосток 
 ```
+![output weather](screenshot.jpg)
