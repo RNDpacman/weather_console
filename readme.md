@@ -42,7 +42,7 @@ positional arguments:
 
 options:
   -h, --help         show this help message and exit
-  --options OPTIONS  See https://wttr.in/:help. Default: "nTqM"
+  --options OPTIONS  See https://wttr.in/:help. Default: "nM"
   --lang LANG        Language. See https://wttr.in/:help. Default: "ru"
 ```
 
