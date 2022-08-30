@@ -18,33 +18,6 @@ def get_weather(*locations, lang='en', options='nTqu', host='wttr.in') -> str:
 
     return '\n'.join(text)
 
-def print_weather(text: str, file=sys.stdout):
-    '''
-    Выводит на консоль text
-    '''
-    print(text, file=file)
-
-
-def get_padding(char_pad: str, string: str, len_pad=80) -> str:
-    '''
-    Добивает переданную строку string с двух сторон символом char_pad до длины len_pad
-    '''
-
-    if len(string) + 2 > len_pad:
-        raise Exception('too little len_pad')
-
-    padding = []
-    padding.extend(string)
-
-    while len(padding) < len_pad:
-
-        if len(padding) % 2:
-            padding.append(char_pad)
-        else:
-            padding.insert(0, char_pad)
-
-    return ''.join(padding)
-
 
 def modifies_text(text):
     '''
@@ -88,8 +61,7 @@ def main():
     args = get_parser()
 
     text = get_weather(*args.locations, lang=args.lang, options=args.options)
-    mod_text = modifies_text(text)
-    print_weather(mod_text)
+    print(text)
 
 if __name__ == '__main__':
     main()
