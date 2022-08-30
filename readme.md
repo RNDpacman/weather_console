@@ -8,7 +8,7 @@ git clone https://github.com/RNDpacman/weather_console.git
 ```
 
 ```
-python -m venv ./weather_console
+python -m venv ./weather_console/venv
 ```
 
 ```
@@ -16,7 +16,7 @@ cd ./weather_console
 ```
 
 ```
-source ./bin/activate
+source ./venv/bin/activate
 ```
 
 ```
@@ -54,3 +54,24 @@ python ./main.py Москва Мордор Владивосток
 
 <img src="screenshot.jpg" width="400">
 
+
+### Integrate
+
+Add this to your `~/.bashrc`
+```
+function weather_console() {
+source /<your path>/weather_console/venv/bin/activate &&
+python /<your path>/weather_console/main.py $@ &&
+deactivate;
+ }
+```
+
+Apply changes:
+```
+source ~/.bashrc
+```
+
+And test it:
+```
+weather_console kiev kharkov
+```
