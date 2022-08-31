@@ -51,8 +51,8 @@ def get_parser():
 
     parser = argparse.ArgumentParser(description='Show weather from https://wttr.in')
     parser.add_argument('locations', nargs='+', help='locations one or more')
-    parser.add_argument('--options', default=dflt_opt, help=f'See https://wttr.in/:help. Default: {dflt_opt}')
-    parser.add_argument('--lang', default=dflt_lang, help=f'Language. See https://wttr.in/:help. Default: {dflt_lang}')
+    parser.add_argument('--options', default=dflt_opt, help=f'See https://wttr.in/:help Default: {dflt_opt}')
+    parser.add_argument('--lang', default=dflt_lang, help=f'Language. See https://wttr.in/:help Default: {dflt_lang}')
 
     return parser.parse_args()
 
